@@ -25,7 +25,7 @@
 		List<String> scoreList = Arrays.asList(new String[]{"X", "O", "O", "O", "X", "O", "O", "O", "X", "O"});
 		int score = 0;
 		for(String s:scoreList){
-			if(s == "O"){
+			if(s.equals("O")){
 				score += 10;
 			}
 		}
