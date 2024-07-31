@@ -44,24 +44,17 @@
 			<tbody>
 			<%
 				for(Map<String, Object> storeMap:list){
-					if(storeMap.get("menu").equals(menuInput)){
-						if(underFour.equals("4점 이하")){
-							if(((Number) storeMap.get("point")).doubleValue() > 4.0){
-						
-			%>
+					if(menuInput.equals(storeMap.get("menu"))){
+						if(underFour.equals("4점 이하")){ //4점 이하 제외가 체크되어 있으면
+							double point = (Double)storeMap.get("point"); //다운캐스팅
+							if(point <= 4.0){ //point 4점 이하는 아무것도 안 보이게
+				} else{ //point가 4점 이상인 경우 보이게 %>
 				<tr>
-					<td><%=storeMap.get("name") %></td>
 					<td><%=storeMap.get("menu") %></td>
+					<td><%=storeMap.get("name") %></td>
 					<td><%=storeMap.get("point") %></td>
 				</tr>
-			<%}%>
-			<%} else{ %>
-				<tr>
-					<td><%=storeMap.get("name") %></td>
-					<td><%=storeMap.get("menu") %></td>
-					<td><%=storeMap.get("point") %></td>
-				</tr>
-			<%}}} %>
+			<%}}}} %>
 			</tbody>
 		</table>
 	</div>

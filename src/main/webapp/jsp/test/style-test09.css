@@ -1,0 +1,24 @@
+@charset "UTF-8";
+#wrap{
+	width: 1200px;
+	margin:0 auto
+}
+
+header{
+	width: 1200px;
+	height: 70px;
+}
+
+nav{
+	width: 1200px;
+	height: 50px;
+}
+
+.body{
+	width:1200px;
+}
+
+footer{
+	width : 1200px;
+	height: 50px;
+}
