@@ -95,8 +95,10 @@
 		<header class="d-flex align-items-center">
 			<h2 class="text-success">Melong</h2>
 			<form method="get" action="/jsp/test/test10-detail.jsp" class="d-flex w-75">
-				<input type="text" class="form-control col-4 ml-4" name="musicName">
-				<button type="submit" class="btn btn-info">검색</button>
+				<div class="input-group col-4">
+					<input type="text" class="form-control" name="musicName">
+					<button type="submit" class="btn btn-success">검색</button>
+				</div>
 			</form>
 		</header>
 		
@@ -110,8 +112,8 @@
 			</ul>
 		</nav>
 		
-		<section class="section1 border border-success border-2 d-flex">
-			<div class="imageSection d-flex justify-content-center align-items-center">
+		<section class="section1 border border-success border-2 d-flex p-3">
+			<div class="imageSection">
 				<img src="<%=artistInfo.get("photo") %>" class="w-75">
 			</div>
 			<div class="ml-2">
@@ -135,7 +137,7 @@
 				<%for(Map<String, Object>music : musicList){ %>
 					<tr>
 						<td><%=music.get("id") %></td>
-						<td><a href="/jsp/test/test10-detail.jsp?<%=music.get("title")%>"><%=music.get("title") %></a></td>
+						<td><a href="/jsp/test/test10-detail.jsp?idSearch=<%=music.get("id")%>&musicName=<%=music.get("title") %>"><%=music.get("title") %></a></td>
 						<td><%=music.get("album") %></td>
 					</tr>
 					<%} %>

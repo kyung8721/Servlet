@@ -90,13 +90,18 @@
 	    musicList.add(musicInfo);
 	    
 	    String musicName = request.getParameter("musicName");
+	    String idSearch = request.getParameter("idSearch");
 	%>
 	
 	<div id="wrap" class="mt-5">
 		<header class="d-flex align-items-center">
 			<h2 class="text-success">Melong</h2>
-			<input type="text" class="form-control col-4 ml-4">
-			<button type="button" class="btn btn-info">검색</button>
+			<form method="get" action="/jsp/test/test10-detail.jsp" class="d-flex w-75">
+				<div class="input-group col-4">
+					<input type="text" class="form-control">
+					<button type="submit" class="btn btn-success">검색</button>
+				</div>
+			</form>
 		</header>
 		
 		<nav class="d-flex align-items-center">
@@ -115,7 +120,7 @@
 		
 		<section class="section3 border border-success border-2 d-flex">
 		<%for(Map<String, Object>music:musicList){
-			if(music.get("title").equals(musicName)){
+			if(music.get("id").equals(idSearch) || music.get("title").equals(musicName)){
 			%>
 			<div class="imageSection2 d-flex justify-content-center align-items-center">
 				<img src="<%=music.get("thumbnail") %>" class="w-75">
