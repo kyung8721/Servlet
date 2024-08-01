@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+#wrap{
+	width:1200px;
+	margin: 0 auto;
+}
+
+header{
+	width:1200px;
+	height:100px;
+}
+
+nav{
+	width:1200px;
+	height:50px;
+}
+
+.section1{
+	width:1200px;
+	height:200px;
+}
+
+.section2{
+	width:1200px;
+}
+
+.section3{
+	width:1200px;
+	height:300px;
+}
+
+footer{
+	width:1200px;
+	height:50px;
+}
+
+.imageSection{
+	width:20%;
+	height:100%
+}
+
+.imageSection2{
+	width:30%;
+	height:100%
+}
